@@ -1,0 +1,470 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Barlow", sans-serif;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2.5rem;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1rem;
+  position: absolute;
+  width: 100%;
+}
+.navbar img {
+  width: 3rem;
+  height: 3rem;
+  margin-left: 3.4rem;
+}
+
+.line {
+  width: 29.563rem;
+  height: 0.063rem;
+  background: #979797;
+  position: absolute;
+  margin-left: 10.438rem;
+  z-index: 1;
+}
+
+.nav-links {
+  padding: 2.4rem 7rem;
+  background: rgba(59, 60, 68, 0.3);
+  backdrop-filter: blur(10px);
+  color: #ffffff;
+}
+
+.nav-link {
+  margin-right: 3rem;
+  text-decoration: none;
+  font-size: 1rem;
+  color: #ffffff;
+  letter-spacing: 2.7px;
+  transition: border 200ms ease-in-out;
+  text-transform: uppercase;
+  border-bottom: 3px solid rgba(255, 255, 255, 0);
+  padding-bottom: 2.188rem;
+}
+
+.nav-link:hover {
+  border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+}
+
+.nav-link.active {
+  border-bottom: 3px solid rgba(255, 255, 255, 1);
+}
+
+.home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url("/assets/home/background-home-desktop.jpg");
+  background-size: cover;
+}
+
+.home_container {
+  width: 450px;
+  margin: 251px 0 131px 165px;
+  color: #ffffff;
+  background-color: #0b0d17;
+}
+
+.home_container h5 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 300;
+  letter-spacing: 4.72px;
+  color: #d0d6f9;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  padding: 0;
+}
+
+.home_container .span-text {
+  font-family: "Bellefair", sans-serif;
+  font-size: 9.375rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.home_container p {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 200;
+  line-height: 32px;
+  margin-top: 25px;
+  color: #d0d6f9;
+  letter-spacing: 0.1px;
+}
+
+.explore {
+  position: relative;
+  height: 274px;
+  width: 274px;
+  background-color: #ffffff;
+  color: #0b0d17;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-family: "Bellefair", sans-serif;
+  font-size: 32px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 359px 90px 131px 0;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.explore::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 500ms linear, transform 750ms ease-in-out;
+}
+
+.explore:hover::after,
+.explore:focus::after {
+  opacity: 1;
+  transform: scale(1.5);
+}
+
+.destination {
+  background-image: url("/assets/destination/background-destination-desktop.jpg");
+  color: #ffffff;
+  background-size: cover;
+}
+
+.destination h1 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 28px;
+  font-weight: 200;
+  letter-spacing: 4.7px;
+  text-transform: uppercase;
+  position: absolute;
+  margin-top: 212px;
+  margin-left: 166px;
+  display: inline-flex;
+  gap: 10px;
+}
+
+.destination h1 span {
+  color: #383b4b;
+  font-weight: bold;
+}
+
+.destination__container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.destinations_text_box {
+  margin-top: 310px;
+  margin-bottom: 118px;
+  position: relative;
+}
+
+.destinations__btn {
+  background-color: transparent;
+  color: #d0d6f9;
+  font-family: "Barlow condensed", sans-serif;
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: none;
+  border-bottom: 3px solid rgba(255, 255, 255, 0);
+  cursor: pointer;
+  margin-right: 35px;
+  padding-bottom: 12px;
+  transition: border 200ms ease-in-out;
+}
+
+.destinations__btn:hover {
+  border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+}
+
+.destinations__btn.active {
+  border-bottom: 3px solid rgba(255, 255, 255, 1);
+}
+
+.destination article {
+  margin-top: 343px;
+  margin-bottom: 112px;
+}
+
+.destination article img {
+  width: 445px;
+  height: 445px;
+}
+
+.destination article h2 {
+  font-family: "Bellefair", sans-serif;
+  font-size: 100px;
+  font-weight: 200;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-top: 25px;
+}
+
+.destination article p {
+  font-family: "Barlow", sans-serif;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 32px;
+  margin-top: 25px;
+  color: #d0d6f9;
+  letter-spacing: 0.1px;
+  max-width: 444px;
+}
+
+.destination_divider {
+  width: 444px;
+  height: 1px;
+  background: #383b4b;
+  margin-top: 54px;
+}
+
+.destination__info {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 68px;
+  margin-top: 28px;
+}
+
+.destination__info h3 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 14px;
+  font-weight: 200;
+  text-transform: uppercase;
+  color: #d0d6f9;
+  display: inline-flex;
+  flex-direction: column;
+  justify-self: start;
+}
+
+.destination_no {
+  font-family: "Bellefair", sans-serif;
+  font-size: 32px;
+  font-weight: 200;
+  color: #ffffff;
+  padding-top: 8px;
+}
+
+.crew {
+  background-image: url("/assets/crew/background-crew-desktop.jpg");
+  color: #ffffff;
+  background-size: cover;
+}
+
+.crew h1 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 28px;
+  font-weight: 200;
+  letter-spacing: 4.7px;
+  text-transform: uppercase;
+  position: absolute;
+  margin-top: 212px;
+  margin-left: 166px;
+  display: inline-flex;
+  gap: 10px;
+}
+
+.crew h1 span {
+  color: #383b4b;
+  font-weight: bold;
+}
+
+.crew__container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 135px;
+  margin-right: 70px;
+}
+
+.crew article img {
+  margin-bottom: 0;
+}
+
+.crew_text_box {
+  max-width: 614px;
+  
+}
+
+.crew article h2 {
+  font-family: "Bellefair", sans-serif;
+  font-size: 56px;
+  font-weight: 200;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-top: 15px;
+}
+
+.crew article h3 {
+  font-family: "Bellefair", sans-serif;
+  font-size: 32px;
+  font-weight: 200;
+  text-transform: uppercase;
+  color: #d0d6f9;
+}
+
+.crew article {
+  margin-top: 212px;
+}
+
+.crew article p {
+  font-family: "Barlow", sans-serif;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 32px;
+  margin-top: 25px;
+  color: #d0d6f9;
+  letter-spacing: 0.1px;
+  max-width: 444px;
+}
+
+.crew__btn {
+  background-color: rgba(255, 255, 255, 0.3);
+  height: 15px;
+  width: 15px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 24px;
+  margin-top: 88px;
+  margin: 88px 24px 0 2px;
+  transition: border 200ms ease-in-out;
+}
+
+.crew__btn:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+.crew__btn.active {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.technology {
+  background-image: url("/assets/technology/background-technology-desktop.jpg");
+  color: #ffffff;
+  background-size: cover;
+}
+
+.technology h1 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 28px;
+  font-weight: 200;
+  letter-spacing: 4.7px;
+  text-transform: uppercase;
+  position: absolute;
+  margin-top: 212px;
+  margin-left: 166px;
+  display: inline-flex;
+  gap: 10px;
+}
+
+.technology h1 span {
+  color: #383b4b;
+  font-weight: bold;
+}
+
+.technology article {
+  margin-top: 272px;
+  margin-bottom: 101px;
+}
+
+.technology__container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.technology article img {
+  width: 515px;
+  height: 527px;
+}
+
+.technology article img {
+  width: 515px;
+  height: 527px;
+}
+
+.technology_text_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 60px;
+  margin-left: 100px;
+}
+
+.technology article p {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 32px;
+  color: #d0d6f9;
+  letter-spacing: 0.1px;
+  max-width: 444px;
+}
+
+.technology article h2 {
+  font-family: "Bellefair", sans-serif;
+  font-size: 56px;
+  font-weight: 200;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-top: 15px;
+  margin-bottom: 17px;
+}
+
+.btn_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+}
+
+.technology__btn {
+  height: 80px;
+  width: 80px;
+  background-color: transparent;
+  color: #d0d6f9;
+  font-family: "Bellefair", sans-serif;
+  font-size: 32px;
+  font-weight: 200;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: border 200ms ease-in-out;
+}
+
+.technology__btn:hover {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.technology__btn.active {
+  background-color: #ffffff;
+  color: #0b0d17;
+}
