@@ -69,7 +69,6 @@ body {
   align-items: center;
   background-image: url("/assets/home/background-home-desktop.jpg");
   background-size: cover;
-  height: 100vh;
 }
 
 .home_container {
