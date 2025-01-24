@@ -15,20 +15,26 @@ const Crew = () => {
       <div className="crew__container">
         <article>
           <img src={images.png} alt={name} />
+          <div className='crew_divider'></div>
         </article>
         <article className="crew_text_box">
+          <div className='crew_text'>
+            <h3>{role}</h3>
+            <h2>{name}</h2>
+            <p>{bio}</p>
+          </div>
 
-          <h3>{role}</h3>
-          <h2>{name}</h2>
-          <p>{bio}</p>
-          {people.map((person, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentCrew(index)}
-              className={index === currentCrew ? "crew__btn active" : "crew__btn"}
-            >
-            </button>
-          ))}
+          <div>
+            {people.map((person, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentCrew(index)}
+                className={index === currentCrew ? "crew__btn active" : "crew__btn"}
+              >
+              </button>
+            ))}
+          </div>
+
         </article>
       </div>
     </section>

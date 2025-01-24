@@ -19,15 +19,18 @@ const Destination = () => {
           <img src={images.png} alt={name} />
         </article>
         <article className="destinations_text_box">
-          {planets.map((planet, index) => (
-            <button
-              key={index}
-              onClick={() => setActivePlanet(index)}
-              className={index === activePlanet ? "destinations__btn active" : "destinations__btn"}
-            >
-              {planet.name}
-            </button>
-          ))}
+          <div className="destinations">
+            {planets.map((planet, index) => (
+              <button
+                key={index}
+                onClick={() => setActivePlanet(index)}
+                className={index === activePlanet ? "destinations__btn active" : "destinations__btn"}
+              >
+                {planet.name}
+              </button>
+            ))}
+          </div>
+
           <h2>{name}</h2>
           <p>{description}</p>
           <div className="destination_divider"></div>
