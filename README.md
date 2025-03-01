@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Natiman1/Space-tourism)
-- Live Site URL: [Add live site URL here](https://space-tourism-one-dusky.vercel.app/)
+- Solution URL: [https://github.com/Natiman1/Space-tourism]
+- Live Site URL: [https://space-tourism-one-dusky.vercel.app/]
 
 ## My process
 
