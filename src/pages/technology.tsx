@@ -51,7 +51,7 @@ const Technology = () => {
             </p>
           </div>
           <div className="flex gap-4 lg:flex-col lg:justify-center lg:gap-8">
-            {spaceSheeps.map((spaceSheep, index) => (
+            {spaceSheeps.map((_spaceSheep, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentSpaceSheep(index)}

@@ -49,7 +49,7 @@ const Crew = () => {
           </div>
 
           <div className="flex gap-4 md:mb-10">
-            {people.map((person, index) => (
+            {people.map((_person, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentCrew(index)}
@@ -57,7 +57,8 @@ const Crew = () => {
                   "h-2.5 w-2.5 cursor-pointer rounded-full bg-[#ffffff4d] hover:bg-[#979797]",
                   index === currentCrew ? "bg-white" : "",
                 )}
-              ></button>
+              >
+              </button>
             ))}
           </div>
         </article>
